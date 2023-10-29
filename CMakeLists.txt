@@ -13,7 +13,7 @@ elseif(APPLE)
 endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT )
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Game_SC)
 
 add_subdirectory(glfw)
 add_subdirectory(Orchid)
