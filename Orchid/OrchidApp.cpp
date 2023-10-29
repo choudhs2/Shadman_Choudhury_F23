@@ -20,8 +20,13 @@ namespace oc {
 
 	template <typename T>
 	void OrchidApp<T>::Run() {
+		mWindow.Create("Game_SC", 800, 600);
 		while (mShouldContinue) {
 			OnUpdate();
+			mWindow.SwapBuffers();
+			mWindow.PollEvents();
+			//glfwSwapBuffers(window);
+			//glfwPollEvents();
 		}
 	}
 	template<typename T>

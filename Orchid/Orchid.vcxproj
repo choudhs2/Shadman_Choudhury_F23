@@ -107,6 +107,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Orchid;$(SolutionDir)glfw\include;$(SolutionDir)glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,6 +125,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Orchid;$(SolutionDir)glfw\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,13 +135,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="GLFWCode\GLFWImplementation.h" />
     <ClInclude Include="include\Orchid.h" />
     <ClInclude Include="OrchidApp.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="utilities.h" />
+    <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameWindow.cpp" />
+    <ClCompile Include="GLFWCode\GLFWImplementation.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="placeholder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\glfw_proj\src\glfw.vcxproj">
+      <Project>{a97d9985-e39e-3ce2-b99e-27a4f3f6380a}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,10 +1,11 @@
 #pragma once
 #include "utilities.h"
 #include "pch.h"
+#include "GameWindow.h"
 
 namespace oc {
 	template <typename T>
-	class OC_API OrchidApp {
+	class OrchidApp {
 	public:
 
 		static void Init();
@@ -16,6 +17,7 @@ namespace oc {
 	private:
 		OrchidApp();
 		inline static OrchidApp* sInstance{ nullptr };
+		GameWindow mWindow;
 		bool mShouldContinue{ true };
 	};
 }
