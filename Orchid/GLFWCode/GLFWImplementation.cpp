@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "utilities.h"
 #include "GLFWImplementation.h"
 
 namespace oc {
@@ -11,6 +12,12 @@ namespace oc {
 
 	void GLFWImplementation::Create(const std::string& name, int width, int height) {
 		mWindow = glfwCreateWindow(width, height, name.c_str(), NULL, NULL);
+		if (mWindow == NULL) {
+			OC_ERROR("Failed to Create GLFW window");
+			glfwTerminate();
+			return;
+		}
+		glfwMakeContextCurrent(mWindow);
 	}
 
 	int GLFWImplementation::GetHeight() const {

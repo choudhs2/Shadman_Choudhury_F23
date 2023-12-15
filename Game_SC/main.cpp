@@ -4,7 +4,7 @@
 class MyGame : public oc::OrchidApp<MyGame> {
 public:
 	virtual void OnUpdate() override {
-		std::cout << "Orchid Running!" << std::endl;
+		//std::cout << "Orchid Running!" << std::endl;
 	}
 };
 

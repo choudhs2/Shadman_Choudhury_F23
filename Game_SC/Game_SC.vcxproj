@@ -107,7 +107,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Orchid\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)glfw\include;$(SolutionDir)stbi;$(SolutionDir)glad\include;$(SolutionDir)Orchid\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +123,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Orchid\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)glfw\include;$(SolutionDir)stbi;$(SolutionDir)glad\include;$(SolutionDir)Orchid\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,8 +136,17 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\glad\glad.vcxproj">
+      <Project>{1e2fef0e-54d1-4b3f-879e-625a0c6f87ce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\glfw_proj\src\glfw.vcxproj">
+      <Project>{a97d9985-e39e-3ce2-b99e-27a4f3f6380a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Orchid\Orchid.vcxproj">
       <Project>{223f5b59-b631-456d-a344-9147f79f9f38}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\stbi\stbi.vcxproj">
+      <Project>{7c2ccce3-c7ab-4cfd-a588-8219a851fe0b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

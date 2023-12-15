@@ -14,6 +14,6 @@ namespace oc {
 
 		~GLFWImplementation() override;
 	private:
-		GLFWwindow* mWindow;
+		GLFWwindow* mWindow{ nullptr };
 	};
 }
