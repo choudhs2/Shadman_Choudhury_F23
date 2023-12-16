@@ -45,6 +45,15 @@
     <ClInclude Include="GLFWCode\OpenGLShader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Picture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureImplementation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLFWCode\OpenGLPicture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -60,6 +69,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GLFWCode\OpenGLShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Picture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFWCode\OpenGLPicture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

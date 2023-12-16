@@ -136,11 +136,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="GLFWCode\OpenGLPicture.h" />
     <ClInclude Include="GLFWCode\GLFWImplementation.h" />
     <ClInclude Include="GLFWCode\OpenGLShader.h" />
     <ClInclude Include="include\Orchid.h" />
     <ClInclude Include="OrchidApp.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Picture.h" />
+    <ClInclude Include="PictureImplementation.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderImplementation.h" />
     <ClInclude Include="utilities.h" />
@@ -148,9 +151,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameWindow.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLPicture.cpp" />
     <ClCompile Include="GLFWCode\GLFWImplementation.cpp" />
     <ClCompile Include="GLFWCode\OpenGLShader.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Picture.cpp" />
     <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 #include "OrchidApp.h"
 #include "utilities.h"
 #include "Shader.h"
+#include "Picture.h"
 
 #include "../glad/include/glad/glad.h"
 #include "../glfw/include/GLFW/glfw3.h"
@@ -70,6 +71,8 @@ namespace oc {
 		shader.SetUniform2Ints("ScreenSize", 800, 600);
 
 		//// Textures ////
+		Picture pic("../Assets/Pictures/test.png");
+		/*
 		//start of picture class code
 		unsigned int texture;
 		glGenTextures(1, &texture);
@@ -91,7 +94,8 @@ namespace oc {
 			OC_ERROR("Failed to load texture from file!");
 		}
 		stbi_image_free(data); //frees the data loaded into the image! (End of picture class code)
-
+		//for destructor: glDeleteTextures(1, mTexture);
+		*/
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
