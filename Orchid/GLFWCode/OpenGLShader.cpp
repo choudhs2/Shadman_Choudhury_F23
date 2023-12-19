@@ -6,11 +6,6 @@
 
 namespace oc {
 	OpenGLShader::OpenGLShader(const std::string& vertexSF, const std::string& fragmentSF) {
-		//delete later
-		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-			OC_ERROR("Failed to initialize GLAD");
-			return;
-		}
 
 		std::string readVertShader = ReadWholeFile(vertexSF);
 		const char* vertexShaderSource = readVertShader.c_str();
@@ -57,11 +52,6 @@ namespace oc {
 	}
 
 	OpenGLShader::OpenGLShader(std::string&& vertexSF, std::string&& fragmentSF) {
-		//delete later
-		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-			OC_ERROR("Failed to initialize GLAD");
-			return;
-		}
 
 		std::string readVertShader = ReadWholeFile(std::move(vertexSF));
 		const char* vertexShaderSource = readVertShader.c_str();

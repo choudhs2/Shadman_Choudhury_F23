@@ -12,8 +12,8 @@ namespace oc {
 		Picture(const std::string& picFile);
 		Picture(std::string&& picFile);
 		void Bind();
-		int GetWidth();
-		int GetHeight();
+		int GetWidth() const;
+		int GetHeight() const;
 
 	private:
 		std::unique_ptr<PictureImplementation> mImplementation{ nullptr };

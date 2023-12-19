@@ -29,11 +29,11 @@ namespace oc {
 		mImplementation->Bind();
 	}
 
-	int Picture::GetWidth() {
+	int Picture::GetWidth() const {
 		return mImplementation->GetWidth();
 	}
 
-	int Picture::GetHeight() {
+	int Picture::GetHeight() const {
 		return mImplementation->GetHeight();
 	}
 }

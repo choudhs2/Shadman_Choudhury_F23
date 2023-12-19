@@ -13,7 +13,7 @@ namespace oc {
 
 		~OpenGLShader();
 	private:
-		unsigned int mShaderProgram;
+		unsigned int mShaderProgram{ 0 };
 
 		std::string ReadWholeFile(const std::string& filename);
 		std::string ReadWholeFile(std::string&& filename);

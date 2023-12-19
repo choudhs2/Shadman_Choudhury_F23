@@ -69,7 +69,7 @@ namespace oc {
 			0, 1, 2,
 			1, 2, 3
 		};
-
+		//To future me, updating this project: making all of these buffers and everything whenever we want to draw is really inefficient, fix it later!
 		unsigned int VAO;
 		glGenVertexArrays(1, &VAO);
 		glBindVertexArray(VAO);
