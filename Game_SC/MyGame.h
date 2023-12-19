@@ -8,7 +8,7 @@ public:
 	void OnKeyPress(const oc::KeyPressed& e);
 private:
 	oc::Picture mPic{ "../Assets/Pictures/test.png" };
-	//oc::Unit mUnit{"../Assets/Pictures/test.png", 100, 500};
-	int mXPos{ 100 };
-	int mYPos{ 200 };
+	oc::Unit mUnit{"../Assets/Pictures/test.png", 100, 500, 0.5};
+	//int mXPos{ 100 };
+	//int mYPos{ 200 };
 };

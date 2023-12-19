@@ -26,6 +26,10 @@ namespace oc {
 		mImplementation->DrawScaled(x, y, scale, pic);
 	}
 
+	void Renderer::Draw(Unit& item) {
+		mImplementation->Draw(item);
+	}
+
 	void Renderer::Clear() {
 		mImplementation->Clear();
 	}

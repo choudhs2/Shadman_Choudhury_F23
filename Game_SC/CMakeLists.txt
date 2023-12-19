@@ -1,7 +1,9 @@
 set(HEADER_FILES 
+	MyGame.h
 )
 
 set(SOURCE_FILES 
+	MyGame.cpp
 	main.cpp
 )
 

@@ -1,3 +1,4 @@
+#pragma once
 #include "pch.h"
 #include "Unit.h"
 #include "Picture.h"
@@ -36,6 +37,10 @@ namespace oc {
 
 	void Unit::UpdateYCoord(int amount) {
 		mYPos += amount;
+	}
+
+	void Unit::Bind() {
+		mImage.Bind();
 	}
 
 	bool UnitsOverlap(const Unit& a, const Unit& b) {
