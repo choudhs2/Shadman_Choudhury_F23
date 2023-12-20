@@ -107,7 +107,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Orchid;$(SolutionDir)glfw\include;$(SolutionDir)glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)stbi;$(SolutionDir)glad\include;$(SolutionDir)Orchid;$(SolutionDir)glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Orchid;$(SolutionDir)glfw\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)stbi;$(SolutionDir)glad\include;$(SolutionDir)Orchid;$(SolutionDir)glfw\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,23 +135,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Events.h" />
     <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="GLFWCode\OpenGLPicture.h" />
     <ClInclude Include="GLFWCode\GLFWImplementation.h" />
+    <ClInclude Include="GLFWCode\OpenGLRenderer.h" />
+    <ClInclude Include="GLFWCode\OpenGLShader.h" />
     <ClInclude Include="include\Orchid.h" />
+    <ClInclude Include="Keys.h" />
     <ClInclude Include="OrchidApp.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Picture.h" />
+    <ClInclude Include="PictureImplementation.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RendererImplementation.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderImplementation.h" />
+    <ClInclude Include="Unit.h" />
     <ClInclude Include="utilities.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="GameWindow.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLPicture.cpp" />
     <ClCompile Include="GLFWCode\GLFWImplementation.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLRenderer.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLShader.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="placeholder.cpp" />
+    <ClCompile Include="Picture.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\glad\glad.vcxproj">
+      <Project>{1e2fef0e-54d1-4b3f-879e-625a0c6f87ce}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\glfw_proj\src\glfw.vcxproj">
       <Project>{a97d9985-e39e-3ce2-b99e-27a4f3f6380a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\stbi\stbi.vcxproj">
+      <Project>{7c2ccce3-c7ab-4cfd-a588-8219a851fe0b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
