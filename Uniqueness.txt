@@ -1,1 +1,2 @@
 This game is simple Whack-A-Mole. You control the Hammer (taken from a Paper Mario Game) which has 9 locations it can be in (3 in the top row, 3 in the middle row, 3 in the bottom row).
+The primary function is the space key to whack, which will make a mole disappear if it was in the slot you whacked.

@@ -5,7 +5,6 @@
 #include "Picture.h"
 #include "Renderer.h"
 #include "Events.h"
-#include "Keys.h"
 #include "Unit.h"
 
 namespace oc {
@@ -26,7 +25,6 @@ namespace oc {
 		void DrawScaled(int x, int y, float scale, Picture& pic);
 
 		void Draw(Unit& item);
-		void DrawScaled(float scale, Unit& item);
 
 		void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc);
 		void SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc);

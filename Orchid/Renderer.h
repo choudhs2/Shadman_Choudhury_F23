@@ -5,6 +5,7 @@
 #include "RendererImplementation.h"
 #include "Shader.h"
 #include "Picture.h"
+#include "Unit.h"
 
 namespace oc {
 	class OC_API Renderer {
@@ -13,6 +14,7 @@ namespace oc {
 		void Init();
 		void Draw(int x, int y, Picture& pic);
 		void DrawScaled(int x, int y, float scale, Picture& pic);
+		void Draw(Unit& item);
 		void Clear();
 
 	private:

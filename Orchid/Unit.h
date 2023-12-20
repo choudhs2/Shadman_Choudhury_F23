@@ -16,6 +16,8 @@ namespace oc {
 		void SetCoords(int x, int y);
 		void UpdateXCoord(int amount);
 		void UpdateYCoord(int amount);
+
+		void Bind(); //calls the picture's bind
 	private:
 		Picture mImage;
 		int mXPos;

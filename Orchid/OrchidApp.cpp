@@ -67,6 +67,11 @@ namespace oc {
 	}
 
 	template<typename T>
+	void OrchidApp<T>::Draw(Unit& item) {
+		mRenderer.Draw(item);
+	}
+
+	template<typename T>
 	void OrchidApp<T>::SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc) {
 		mWindow.SetKeyPressedCallback(callbackFunc);
 	}
