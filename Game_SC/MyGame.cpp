@@ -16,12 +16,19 @@ void MyGame::OnUpdate() {
 	//DrawScaled(mXPos, mYPos, 0.5, mPic);
 	Draw(mBG);
 	if (mNextPop <= std::chrono::steady_clock::now()) {
-		//time to add another mole!
-		int popPos = rand() % 9;
-		while (mWhackas[popPos]->GetState() == 1) { //ensure it is a new mole that popped up
-			popPos = rand() % 9;
+		bool allPopped = true; //for an error case!
+		for (auto& item : mWhackas) {
+			allPopped = allPopped && (item->GetState() == 1);
+			if (!allPopped) { break; }
 		}
-		mWhackas[popPos]->SetState(1); //popped up mole!
+		if(!allPopped) { //error case, so it doesn't freeze when all moles have popped up without being hit
+			//time to add another mole!
+			int popPos = rand() % 9;
+			while (mWhackas[popPos]->GetState() == 1) { //ensure it is a new mole that popped up
+				popPos = rand() % 9;
+			}
+			mWhackas[popPos]->SetState(1); //popped up mole!
+		}
 		mNextPop = std::chrono::steady_clock::now() + mPopTime;
 	}
 	if (mPlayer.GetState() == 1) {
