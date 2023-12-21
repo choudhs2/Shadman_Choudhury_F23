@@ -5,10 +5,20 @@
 
 namespace oc {
 	Unit::Unit(const std::string& image, int x, int y, float scale) : 
-		mImage(image), mXPos(x), mYPos(y), mScale(scale) {}
+		mImage(image), mXPos(x), mYPos(y), mScale(scale), mImageString(image) {}
 
 	Unit::Unit(std::string&& image, int x, int y, float scale) :
-		mImage(std::move(image)), mXPos(x), mYPos(y), mScale(scale) {}
+		mImageString(image), mImage(image), mXPos(x), mYPos(y), mScale(scale) {}
+
+	Unit::Unit(const Unit& rhs) :
+		mImage(rhs.mImageString), mXPos(rhs.mXPos), mYPos(rhs.mYPos), mScale(rhs.mScale), mImageString(rhs.mImageString) {
+	}
+
+	Unit& Unit::operator=(const Unit& rhs) {
+		Unit copy = rhs;
+		std::swap(*this, copy);
+		return *this;
+	}
 
 	int Unit::GetWidth() const {
 		return mImage.GetWidth() * mScale; 
@@ -29,6 +39,10 @@ namespace oc {
 	void Unit::SetCoords(int x, int y) {
 		mXPos = x;
 		mYPos = y;
+	}
+
+	void Unit::SetScale(float s) {
+		mScale = s;
 	}
 
 	void Unit::UpdateXCoord(int amount) {

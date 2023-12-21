@@ -1,2 +1,4 @@
 This game is simple Whack-A-Mole. You control the Hammer (taken from a Paper Mario Game) which has 9 locations it can be in (3 in the top row, 3 in the middle row, 3 in the bottom row).
-The primary function is the space key to whack, which will make a mole disappear if it was in the slot you whacked.
+The primary function is the space key to whack, which will make a mole disappear if it was in the slot you whacked. There is no score, as the main point is just to have fun!
+Additionally, I created a class within my Engine called UnitSet, which holds a vector of Units and the state that is being drawn. This will later allow for minor animations to occur, as I hope to continue this project beyond the Game Engines course.
+I hope you like my game :)

@@ -16,6 +16,7 @@ set(HEADER_FILES
 	ShaderImplementation.h
 	Unit.h
 	utilities.h
+	UnitSet.h
 )
 
 set(SOURCE_FILES 
@@ -29,6 +30,7 @@ set(SOURCE_FILES
 	Renderer.cpp
 	Shader.cpp
 	Unit.cpp
+	UnitSet.cpp
 )
 
 add_definitions(-DOC_DEBUG=2)

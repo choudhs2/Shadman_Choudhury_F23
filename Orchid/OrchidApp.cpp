@@ -8,7 +8,7 @@
 namespace oc {
 	template <typename T>
 	OrchidApp<T>::OrchidApp(){
-		mWindow.Create("Game SC", 800, 600);
+		mWindow.Create("Game SC", 700, 700);
 		mRenderer.Init();
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); }); //A lamda function in C++?? Cool!
 		//format: [what is visible](parameters) {code}
@@ -68,6 +68,11 @@ namespace oc {
 
 	template<typename T>
 	void OrchidApp<T>::Draw(Unit& item) {
+		mRenderer.Draw(item);
+	}
+
+	template<typename T>
+	void OrchidApp<T>::Draw(UnitSet& item) {
 		mRenderer.Draw(item);
 	}
 

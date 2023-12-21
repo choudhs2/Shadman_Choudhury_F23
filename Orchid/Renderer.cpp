@@ -30,6 +30,10 @@ namespace oc {
 		mImplementation->Draw(item);
 	}
 
+	void Renderer::Draw(UnitSet& item) {
+		mImplementation->Draw(item);
+	}
+
 	void Renderer::Clear() {
 		mImplementation->Clear();
 	}
